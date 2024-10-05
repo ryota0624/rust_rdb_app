@@ -15,7 +15,7 @@ jobs:
         with:
           rust-version: 1.81.0
       - run: rustup show
-      - run: cargo install cargo-make
+      - uses: davidB/rust-cargo-make@v1
       - run: makers CHECK
 
   test:
@@ -28,5 +28,5 @@ jobs:
         with:
           rust-version: 1.81.0
       - run: rustup show
-      - run: cargo install cargo-make
+      - uses: davidB/rust-cargo-make@v1
       - run: makers TEST
