@@ -1,0 +1,25 @@
+[tasks.CHECK]
+description = "check code"
+script = ['''
+cargo fmt --check --all
+cargo check
+cargo clippy --all --all-features --tests -- -D warnings
+''']
+
+[tasks.TEST]
+description = "run tests"
+script = ['''
+cargo test --all-features
+''']
+
+[tasks.FIX_CODE]
+description = "fix code"
+script = ['''
+cargo fmt
+cargo clippy --all --all-features --tests --fix
+cargo fix
+''']
+
+[tasks.BUILD_IMAGE]
+command = "docker"
+args = ["build", "-t", "rdb-app", "."]
