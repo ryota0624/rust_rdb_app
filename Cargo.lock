@@ -3,5 +3,12 @@
 version = 3
 
 [[package]]
-name = "rdb-app"
+name = "app"
+version = "0.1.0"
+dependencies = [
+ "database",
+]
+
+[[package]]
+name = "database"
 version = "0.1.0"
