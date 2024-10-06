@@ -24,5 +24,6 @@ cargo fix
 ''']
 
 [tasks.BUILD_IMAGE]
+workspace = false
 command = "docker"
 args = ["build", "-t", "rdb-app", "."]
