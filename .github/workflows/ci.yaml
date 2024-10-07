@@ -29,4 +29,5 @@ jobs:
           rust-version: 1.81.0
       - run: rustup show
       - uses: davidB/rust-cargo-make@v1
+      - uses: taiki-e/install-action@cargo-llvm-cov
       - run: makers TEST
