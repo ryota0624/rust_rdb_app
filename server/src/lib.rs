@@ -40,7 +40,6 @@ impl From<Schema> for async_graphql::Schema<Query, Mutation, EmptySubscription> 
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     #[test]
